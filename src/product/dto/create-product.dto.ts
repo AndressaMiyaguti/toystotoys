@@ -6,6 +6,7 @@ import {
   IsArray,
   IsOptional,
   IsBoolean,
+  IsNumber,
 } from 'class-validator';
 
 export class CreateProductDto {
@@ -29,6 +30,7 @@ export class CreateProductDto {
   description: string;
 
   @IsNotEmpty({ message: 'Campo"vazio" Insira o preço do produto' })
+  @IsNumber()
   price: number;
 
   @IsNotEmpty({
