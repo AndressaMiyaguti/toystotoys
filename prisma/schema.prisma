@@ -41,7 +41,7 @@ model Product {
   discount    Boolean
   quantity    Int
   description String
-  price       String
+  price       Float
   category    String
   updateAt    DateTime @updatedAt
   createAt    DateTime @default(now())

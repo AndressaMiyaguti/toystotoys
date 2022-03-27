@@ -57,14 +57,6 @@ export class UserService {
     const newUser = user.map(({ password, ...resto }) => resto);
     return newUser;
   }
-  /* 
-  async update( id: string, dto: UpdateUserDto ): Promise<User> {
-    const data: Prisma.UserUpdateInput =  {
-      ...dto,
-      updateAt: new Date( Date.now())
-    }
-    return await this.db.user.update({where: {id}, data })     
-  } */
 
   async deleteOne(id: string): Promise<{ message: string }> {
     await this.db.user.delete({
