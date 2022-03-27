@@ -19,7 +19,8 @@ model User {
   cep             String
   street          String
   number          String
-  complement      String
+  complement      String?
+  district        String
   city            String
   state           String
   phone           String
